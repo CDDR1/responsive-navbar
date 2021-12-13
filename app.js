@@ -1,7 +1,7 @@
 const hamburgerToggle = document.querySelector('.hamburger-toggle');
-const navLinksToggle = document.querySelector('.nav-links-toggle');
+const navLinks = document.querySelector('.nav-links');
 
 hamburgerToggle.addEventListener('click', () => {
     hamburgerToggle.classList.toggle('hamburger-toggle-rotate');
-    navLinksToggle.classList.toggle('show-links');
+    navLinks.classList.toggle('show-links');
 });

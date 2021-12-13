@@ -15,6 +15,10 @@ html {
 body {
     background-color: rgb(232, 244, 255);
 }
+
+.flex-container {
+    display: flex;
+}
 /* End of Common Styles */
 
 /* NavBar */
@@ -22,10 +26,11 @@ body {
     background-color: #fff;
     padding: 1.7rem 2rem;
     box-shadow: 0 0.4rem 1.5rem rgb(230, 230, 230);
+    align-items: center;
+    justify-content: space-between;
 }
 
-.flex-container {
-    display: flex;
+.mobile-nav {
     justify-content: space-between;
     align-items: center;
 }
@@ -70,32 +75,29 @@ body {
     transform: rotate(90deg);
     color: #000;
 }
-
-.nav-links-toggle {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.4s;
-}
-
-.show-links {
-    height: 14rem;
-}
 /* End of NavBar */
 
 /* Responsive */
 @media (max-width: 1022px) {
     .nav {
+        display: block;
         padding: 0;
     }
 
-    .flex-container {
+    .mobile-nav {
         padding: 1.7rem 2rem;
     }
 
     .nav-links {
-        display: none;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.4s;
     }
-
+    
+    .show-links {
+        height: 14rem;
+    }
+    
     .nav-socials {
         display: none;
     }
